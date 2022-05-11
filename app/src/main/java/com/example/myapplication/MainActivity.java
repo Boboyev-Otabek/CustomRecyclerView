@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
 
-        List<Member> members = new ArrayList<>();
+        List<Member> members =  ArrayListMember();
 
-        members.add(new Member("Otabek","Boboyev"));
-        members.add(new Member("Otabek","Boboyev"));
-        members.add(new Member("Otabek","Boboyev"));
-        members.add(new Member("Otabek","Boboyev"));
-        members.add(new Member("Otabek","Boboyev"));
+//        members.add(new Member("Otabek","Boboyev"));
+//        members.add(new Member("Otabek","Boboyev"));
+//        members.add(new Member("Otabek","Boboyev"));
+//        members.add(new Member("Otabek","Boboyev"));
+//        members.add(new Member("Otabek","Boboyev"));
 
 
         refreshAdapter(members);
@@ -48,5 +48,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adaptyer);
     }
 
+    private List<Member> ArrayListMember(){
+        List<Member> members=new ArrayList<>();
+        for (int i=0; i<30; i++){
+            members.add(new Member("Otabek"+i,"Boboyev"+1));
+        }
+        return members;
+    }
 
 }
